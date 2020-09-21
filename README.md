@@ -3,7 +3,7 @@ Implementando un Mapa (HashMap)
 =====
 
 ---
-**Antes de comenzar**
+**ANTES DE COMENZAR**
 
 * Para resolver el laboratorio debe conectarse a Repl.it. 
 * Sólo puede modificar los archivos *hashmap.c* y *main.c*

@@ -156,8 +156,8 @@ int insert_test1(){ //elemento con hash=3
         return 0;
     }
 
-    if(map->capacity != 10){
-        err_msg("modifico la capacidad del arreglo");
+    if(enlarge_called == 1){
+        err_msg("llamo a funcion enlarge");
         return 0;
     }
     ok_msg("insercion exitosa");
@@ -220,7 +220,7 @@ int insert_test5(){ //factor de carga>0.7, se llama a función enlarge
     info_msg("se setea size en 7 de 10");
     info_msg("se inserta nuevo elemento");
     insertMap(map, _strdup("key"),_strdup("value"));
-    if(map->capacity != 20){
+    if(enlarge_called == 0){
         err_msg("insertMap no llama a funcion enlarge");
         return 0;
     }
