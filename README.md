@@ -18,7 +18,7 @@ Implementando un Mapa (HashMap)
 
 
 
-En este laboratorio implementaremos un **mapa**. Para ello usaremos la siguiente estructura (tabla hash):
+En este laboratorio implementaremos un **mapa**. Para ello usaremos la siguiente estructura (tabla hash) que se encuentra en el archivo *hashmap.c*
 
     struct Pair {
         char * key;
@@ -89,8 +89,9 @@ Ejercicios
 
 
 
-
 [Revise las diapositivas](https://docs.google.com/presentation/d/1WTMXgVcZNQZc8ezeEwoyt6TFVmVl-ezDuGSNnRfsbjQ/edit#slide=id.p) si necesita más detalles para implementar las operaciones. También puede consultar el capítulo 11 del libro **Introduction to Algorithms**.
+
+Recuerde que todas las funcionalidades se implementan en *hashmap.c*
 
 
 1.- Implemente la función *createMap* en el archivo hashmap.c. Esta función crea una variable de tipo HashMap, inicializa el arreglo de buckets con casillas nulas, inicializa el resto de variables y retorna el mapa. Inicialice el índice current a -1.
