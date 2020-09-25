@@ -417,7 +417,7 @@ int next_test(){
 
 
     
-
+    info_msg("llamando a nextMap (deberia retornar NULL)");
     if(nextMap(map)!=NULL){
         err_msg("nextMap no retorna NULL");
         return 0;
