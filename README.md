@@ -148,20 +148,6 @@ Recuerde actualizar la variable size.
 
     }
 
-La función removeNode será usada por la función *eraseTreeMap* para eliminar datos del árbol usando la clave.
-
-    void eraseTreeMap(TreeMap * tree, void* key){
-        if (tree == NULL || tree->root == NULL) return;
-        if (searchTreeMap(tree, key) == NULL) return;
-        TreeNode* node = tree->current;
-        removeNode(tree, node);
-    } 
-
-Para verificar que su código esté correcto puede ejecutar el siguiente test:
-
-    gcc test.c; .\a.exe erase
-
-
 5.- Implemente las funciones para recorrer la estructura: void * firstMap(HashMap * map) retorna el primer **valor** válido del arreglo buckets. void * nextMap(HashMap * map) retorna el siguiente **valor** del arreglo buckets a partir índice current. Recuerde actualizar el índice.
 
     void * firstMap(HashMap * map) {
