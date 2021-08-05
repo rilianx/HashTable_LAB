@@ -5,7 +5,7 @@
 #include <ctype.h>
 #include "hashmap.h"
 
-typedef struct Pair Pair;
+
 typedef struct HashMap HashMap;
 int enlarge_called=0;
 

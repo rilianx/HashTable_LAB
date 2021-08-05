@@ -24,3 +24,16 @@ test.c:371:9: error: assignment from incompatible pointer type [-Werror=incompat
 cc1.exe: all warnings being treated as errors
 Compilation failed
 e60f376
+ju.,  5 de ago. de 2021 19:55:38: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+test.c: In function 'first_test':
+test.c:349:17: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+     char* aux = firstMap(map);
+                 ^~~~~~~~
+test.c:371:9: error: assignment from incompatible pointer type [-Werror=incompatible-pointer-types]
+     aux = firstMap(map);
+         ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+f90d70a
