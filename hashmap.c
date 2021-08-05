@@ -66,18 +66,18 @@ void eraseMap(HashMap * map,  char * key) {
 
 }
 
-void * searchMap(HashMap * map,  char * key) {   
+Pair * searchMap(HashMap * map,  char * key) {   
 
 
     return NULL;
 }
 
-void * firstMap(HashMap * map) {
+Pair * firstMap(HashMap * map) {
 
     return NULL;
 }
 
-void * nextMap(HashMap * map) {
+Pair * nextMap(HashMap * map) {
 
     return NULL;
 }
