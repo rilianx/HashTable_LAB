@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "hashmap-answer.c"
+#include "hashmap.c"
 
 
 
