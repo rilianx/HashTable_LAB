@@ -40,20 +40,22 @@ int main() {
     "of","a","book","thought","Alice","without","pictures","or","conversation"};
     int i;
     for(i=0;i<57;i++){
-        Palabra* aux=searchMap(map,words[i]);
-        if(aux!=NULL)
-            aux->count++;
-        else{
-            aux = creaPalabra(_strdup(words[i]));
-            insertMap(map,_strdup(words[i]),aux);
+        Pair* aux=searchMap(map,words[i]); //clave: palabra, valor: int*
+        
+        if(aux!=NULL){
+            (*(int*)aux->value)++;
+        }else{
+            int* cont = (int*) malloc (sizeof(int));
+            *cont=1;
+            insertMap(map,_strdup(words[i]),cont);
         }
     }
 
-    Palabra* pal = firstMap(map);
     printf("Recorriendo el mapa:\n");
-    while(pal!=NULL){
-        printf("%s: %d\n", pal->word, pal->count);
-        pal = nextMap(map);
+    Pair* par = firstMap(map);
+    while(par!=NULL){
+        printf("%s: %d\n", (char*) par->key, *(int*) par->value);
+        par = nextMap(map);
     }
 
 

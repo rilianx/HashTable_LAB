@@ -10,9 +10,11 @@ Implementando un Mapa (HashMap)
 * Puede revisar el archivo *test.c* para entender los errores de su código
 * Para testear sus códigos debe hacer click en Run▸
 * No está permitido usar comandos de git (a menos que el profesor lo indique)
-* Para probar su código terminado, puede compilar y ejectuar el main así:
-        
-        gcc main.c hashmap.c; ./a.out
+* Para evitar escribir su login y contraseña github cada vez que desea subir los cambios, puede escribir en la consola el siguiente comando: 
+````
+git remote set-url origin https://{login}:{pass}@github.com/{repo}
+````
+Reemplace `{login}` y `{pass}` por su login y contraseña de usuario github. {repo} es el nombre del repositorio github asociado a su código, debería hacer algo como: `OptativoPUCV/2021_2-lab3-iaraya` 
 
 ---
 
@@ -20,6 +22,7 @@ Implementando un Mapa (HashMap)
 
 En este laboratorio implementaremos un **mapa**. Para ello usaremos la siguiente estructura (tabla hash) que se encuentra en el archivo *hashmap.c*
 
+    //en hashmap.h
     struct Pair {
         char * key;
         void * value;
@@ -120,8 +123,8 @@ Recuerde actualizar la variable size.
 
 
 
-3.- Implemente la función void * searchMap(HashMap * map,  char * key), la cual retorna el **valor** asociado a la clave ingresada. 
-Recuerde que para buscar el valor debe:
+3.- Implemente la función Pair * searchMap(HashMap * map,  char * key), la cual retorna el **Pair** asociado a la clave ingresada. 
+Recuerde que para buscar el par debe:
 a - Usar la función hash para obtener la posición donde puede encontrarse el par con la clave
 b - Si la clave no se encuentra avance hasta encontrarla (*método de resolución de colisiones*)
 c - Si llega a una casilla nula, retorne NULL inmediatamente (no siga avanzando, la clave no está)
@@ -129,7 +132,7 @@ c - Si llega a una casilla nula, retorne NULL inmediatamente (no siga avanzando,
 Recuerde actualizar el índice current a la posición encontrada.
 Recuerde que el arreglo es **circular**.
 
-    void * searchMap(HashMap * map,  char * key) {
+    Pair * searchMap(HashMap * map,  char * key) {
 
 
         return NULL;
@@ -157,20 +160,16 @@ La función removeNode será usada por la función *eraseTreeMap* para eliminar 
         removeNode(tree, node);
     } 
 
-Para verificar que su código esté correcto puede ejecutar el siguiente test:
 
-    gcc test.c; .\a.exe erase
+5.- Implemente las funciones para recorrer la estructura: Pair * firstMap(HashMap * map) retorna el primer **Pair** válido del arreglo buckets. Pair * nextMap(HashMap * map) retorna el siguiente **Pair** del arreglo buckets a partir índice current. Recuerde actualizar el índice.
 
-
-5.- Implemente las funciones para recorrer la estructura: void * firstMap(HashMap * map) retorna el primer **valor** válido del arreglo buckets. void * nextMap(HashMap * map) retorna el siguiente **valor** del arreglo buckets a partir índice current. Recuerde actualizar el índice.
-
-    void * firstMap(HashMap * map) {
+    Pair * firstMap(HashMap * map) {
         
 
         return NULL;
     }
 
-    void * nextMap(HashMap * map)  {
+    Pair * nextMap(HashMap * map)  {
        
 
         return NULL;
@@ -194,11 +193,13 @@ e - Inserte los elementos del arreglo *old_buckets* en el mapa (use la función 
     }
 
 
-Ya implementó todas las funcionalides del TDA Mapa.
+### Ya implementó todas las funcionalides del TDA Mapa.
+
+
 
 Ahora ya puede comenzar a utilizar su mapa. Puede comenzar viendo el código de ejemplo del archivo *main.c*. Para compilar y ejecutar:
-
-    gcc main.c hashmap.c
-    .\a.exe 
+    
+    gcc main.c hashmap.c -o main; ./main
+    ./main
 
 Y voilá!

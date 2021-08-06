@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "hashmap.c"
+#include "hashmap-answer.c"
 
 
 
@@ -239,7 +239,7 @@ int search_test1(){ //busqueda de elemento insertado
         return 0;
     }
 
-    if(ret != map->buckets[7]->value) {
+    if(ret != map->buckets[7]) {
         err_msg("elemento retornado por search no coincide");
         return 0;
     }
@@ -259,13 +259,13 @@ int search_test2(){ //busqueda de elemento colisionado
     map->buckets[9]=createPair(_strdup("key"),_strdup("value"));
 
     info_msg("buscando elemento con key=key");
-    void* ret =  searchMap(map, "key");
+    Pair* ret =  searchMap(map, "key");
     if(ret == NULL){
         err_msg("searchMap retorna NULL");
         return 0;
     }
 
-    if(ret != map->buckets[9]->value) {
+    if(ret != map->buckets[9]) {
         err_msg("elemento retornado por search no coincide");
         return 0;
     }
@@ -346,13 +346,13 @@ int first_test(){
     HashMap *map = initializeMap();
 
     info_msg("llamando a firstMap");
-    char* aux = firstMap(map);
+    Pair* aux = firstMap(map);
     if(!aux){
         err_msg("firstMap retorna NULL");
         return 0;
     }
 
-    if(aux != map->buckets[0]->value){
+    if(aux != map->buckets[0]){
         err_msg("firstMap retorna no retorna el primer dato");
         return 0;
     }
@@ -369,13 +369,8 @@ int first_test(){
 
     info_msg("llamando a firstMap");
     aux = firstMap(map);   
-
-    if(aux == (char*) map->buckets[2]){
-        err_msg("estas retornando la key o el Pair, debes retornar el valor");
-        return 0;
-    } 
     
-    if(aux != map->buckets[2]->value){
+    if(aux != map->buckets[2]){
         err_msg("firstMap no retorna el primer valor");
         return 0;
     }
@@ -396,7 +391,7 @@ int next_test(){
 
     info_msg("posicionando a current en la primera casilla");
     map->current=0;
-    if(nextMap(map)!=map->buckets[2]->value){
+    if(nextMap(map)!=map->buckets[2]){
         err_msg("nextMap no retorna bucket[2]->value");
         return 0;
     }else
@@ -409,7 +404,7 @@ int next_test(){
 
     info_msg("posicionando a current en la casilla 7");
     map->current=7;
-    if(nextMap(map)!=map->buckets[8]->value){
+    if(nextMap(map)!=map->buckets[8]){
         err_msg("nextMap no retorna bucket[8]->value");
         return 0;
     }else
