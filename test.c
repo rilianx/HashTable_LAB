@@ -435,7 +435,7 @@ int enlarge_test(){
     if(map->buckets[0]->value!=value3 || map->buckets[2]!=NULL || map->buckets[12]->value != value5 || map->buckets[4]->value!=value4){
         sprintf(msg,"enlarged table is:\n");
         for(i=0;i<map->capacity;i++){
-            if(map->buckets[i]==NULL) sprintf(msg,"%s(null)  ",msg);
+            if(map->buckets[i]==NULL) sprintf(msg,"%.100s(null)  ",msg);
             else sprintf(msg,"%.100s%s  ", msg, (char*)map->buckets[i]->value);
         }   
 
