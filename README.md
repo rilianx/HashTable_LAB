@@ -14,7 +14,7 @@ Implementando un Mapa (HashMap)
 ````
 git remote set-url origin https://{login}:{pass}@github.com/{repo}
 ````
-Reemplace `{login}` y `{pass}` por su login y contraseña de usuario github. `{repo}` es el nombre del repositorio github asociado a su código, debería hacer algo como: `OptativoPUCV/2021_2-lab3-iaraya` 
+Reemplace `{login}` y `{pass}` por su login y token de usuario github. `{repo}` es el nombre del repositorio github asociado a su código, debería hacer algo como: `OptativoPUCV/2021_2-lab3-iaraya` 
 
 ---
 
