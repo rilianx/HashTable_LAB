@@ -5,16 +5,13 @@ Implementando un Mapa (HashMap)
 ---
 **ANTES DE COMENZAR**
 
-* Para resolver el laboratorio debe conectarse a Repl.it. 
+* Abra su cuenta en repl.it
+* En el home de repl.it busque el lab y clónelo para comenzar a trabajar
+* Seleccione el lenguaje (C) y escriba el comando para el botón run: `bash test.sh`
 * Sólo puede modificar los archivos *hashmap.c* y *main.c*
-* Puede revisar el archivo *test.c* para entender los errores de su código
-* Para testear sus códigos debe hacer click en Run▸
+* Para testear sus códigos basta con que apriete el botón **Run**
+* Actualice seguido sus cambios, debe ingresar su contraseña de github y [token](https://drive.google.com/file/d/1s3PyI_HCn0HAx5dm7h0jRiC-G9Cq2p-g/view?usp=sharing)
 * No está permitido usar comandos de git (a menos que el profesor lo indique)
-* Para evitar escribir su login y contraseña github cada vez que desea subir los cambios, puede escribir en la consola el siguiente comando: 
-````
-git remote set-url origin https://{login}:{pass}@github.com/{repo}
-````
-Reemplace `{login}` y `{pass}` por su login y token de usuario github. `{repo}` es el nombre del repositorio github asociado a su código, debería hacer algo como: `OptativoPUCV/2021_2-lab3-iaraya` 
 
 ---
 
