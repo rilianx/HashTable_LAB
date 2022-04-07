@@ -105,8 +105,11 @@ Recuerde que todas las funcionalidades se implementan en *hashmap.c*
 
 2.- Implemente la función void insertMap(HashMap * map, char * key, void * value). Esta función inserta un nuevo dato (key,value) en el mapa y actualiza el índice current a esa posición.
 Recuerde que para insertar un par (clave,valor) debe:
+
 a - Aplicar la función hash a la clave para obtener la posición donde debería insertar el nuevo par
+
 b - Si la casilla se encuentra ocupada, avance hasta una casilla disponible (*método de resolución de colisiones*). Una casilla disponible es una casilla nula, pero también una que tenga un par inválido (key==NULL).
+
 c - Ingrese el par en la casilla que encontró.
 
 No inserte claves repetidas. 
@@ -122,8 +125,11 @@ Recuerde actualizar la variable size.
 
 3.- Implemente la función Pair * searchMap(HashMap * map,  char * key), la cual retorna el **Pair** asociado a la clave ingresada. 
 Recuerde que para buscar el par debe:
+
 a - Usar la función hash para obtener la posición donde puede encontrarse el par con la clave
+
 b - Si la clave no se encuentra avance hasta encontrarla (*método de resolución de colisiones*)
+
 c - Si llega a una casilla nula, retorne NULL inmediatamente (no siga avanzando, la clave no está)
 
 Recuerde actualizar el índice current a la posición encontrada.
@@ -175,10 +181,15 @@ La función removeNode será usada por la función *eraseTreeMap* para eliminar 
 
 6.- Implemente la función void enlarge(HashMap * map). Esta función agranda la capacidad del arreglo buckets y reubica todos sus elementos. Para hacerlo es recomendable mantener referenciado el arreglo *actual/antiguo* de la tabla con un puntero auxiliar. Luego, los valores de la tabla se reinicializan con un nuevo arreglo con el **doble de capacidad**. Por último los elementos del arreglo antiguo se insertan en el mapa *vacío* con el método *insertMap*.
 Puede seguir los siguientes pasos:
+
 a - Cree una variable auxiliar de tipo Pair** para matener el arreglo map->buckets (*old_buckets*);
+
 b - Duplique el valor de la variable capacity.
+
 c - Asigne a map->buckets un nuevo arreglo con la nueva capacidad.
+
 d - Inicialice size a 0.
+
 e - Inserte los elementos del arreglo *old_buckets* en el mapa (use la función insertMap que ya implementó).
 
 
