@@ -46,7 +46,7 @@ La estructura HashMap cuenta con un arreglo de punteros **Pair*** (buckets). Cad
 En la figura se muestra un HashMap de ejemplo. Observe que el arreglo intercala casillas ocupadas con casillas nulas. La cantidad de pares válidos almacenados en la estructura es 6. La capacidad actual del arreglo es 10.
 Para acceder a una clave o valor del mapa, podemos acceder a través del arreglo buckets. Por ejemplo si tenemos un mapa HashMap* map, accedemos a la primera clave de esta manera:
     
-    char* primera_clave = map->buckets[0];
+    char* primera_clave = map->buckets[0]->key;
     
 Para poder ubicar datos dentro del arreglo, la tabla necesita dos funciones: la función hash (para transformar claves en posiciones) y la función is_equal (para comparar claves). En este laboratorio consideraremos que las **claves son de tipo string** (char*). Usaremos la siguiente función hash para transformar claves en posiciones dentro del arreglo:
 
