@@ -5,14 +5,12 @@ Implementando un Mapa (HashMap)
 ---
 **Antes de comenzar**
 
-* Importe el repositorio desde su cuenta en repl.it (si no tiene siga [este tutorial](https://chartreuse-goal-d5c.notion.site/C-mo-comenzar-con-los-labs-b4dd8c7abc5a425d8f25e2eaa060e5b5?pvs=4))
-* Sólo puede modificar los archivos *hashmap.c* y *main.c*
-* Para testear sus códigos basta con que apriete el botón **Run**
-* Si no funciona el botón **Run** puede abrir un terminal (shell) y ejecutar el comando `./test.sh`
-* Verifique que sus cambios se hayan subido a este repositorio
+* Importe el repositorio usando Visual Stucio Code (revise [este tutorial](https://chartreuse-goal-d5c.notion.site/C-mo-comenzar-con-los-labs-b4dd8c7abc5a425d8f25e2eaa060e5b5?pvs=4))
+* Sólo puede modificar el archivo *hashmap.c* y *main.c*
+* Para testear sus códigos debe abrir un terminal **Git Bash** y ejecutar el comando `./test.sh`
+* Verifique que sus cambios se hayan subido a su repositorio GitHub (actualice esta página)
 * **No está permitido usar comandos de git** (a menos que el profesor o ayudantes lo indiquen)
 ---
-
 
 
 En este laboratorio implementaremos un **mapa**. Para ello usaremos la siguiente estructura (tabla hash) que se encuentra en el archivo *hashmap.c*
